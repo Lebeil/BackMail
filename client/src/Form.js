@@ -29,7 +29,7 @@ class Form extends Component {
     formSubmit = (e)=> {
         e.preventDefault()
 
-        let date = {
+        let data = {
             name: this.state.name,
             lastname: this.state.lastname,
             email: this.state.email,
@@ -40,7 +40,7 @@ class Form extends Component {
             .then(res=> {
                 this.setState({
                     sent: true,
-                }),this.resetForm()
+                },this.resetForm())
             }).catch(()=>{
                 console.log('message not sent')
         })
